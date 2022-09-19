@@ -14,3 +14,11 @@ Eventually it should be a worktime scheduler.
 2. run `docker build -t babobeo-test-db ./`
 3. run `docker run -d --name babobeo-test-db-container -p 5432:5432 babobeo-test-db`
 4. run the application itself
+
+## Connect to the db instance
+
+1. `docker ps | grep babobeo-test-db`
+2. Copy container ID
+3. `docker exec -it <CONATINER ID> bash`
+4. `psql -U postgres`
+5. `\c babobeo`
